@@ -8,8 +8,8 @@ const rotaTransacao = Router();
 
 rotaTransacao.use(tokenAutenticacao)
 
-rotaTransacao.post("/", validacaoShcema(CreateTransaction), controleTransacao.create);
-rotaTransacao.get("/", controleTransacao.todasTransaçoesUsuario);
+rotaTransacao.post("/transactions", validacaoShcema(CreateTransaction), controleTransacao.create);
+rotaTransacao.get("/transactions", controleTransacao.todasTransaçoesUsuario);
 rotaTransacao.put("/:id", controleTransacao.update);
 rotaTransacao.delete("/:id", controleTransacao.remove);
 
